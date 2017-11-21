@@ -8,3 +8,4 @@ Library           RemoteSwingLibrary    # A library for testing and connecting t
 Library           Screenshot    # A test library for taking screenshots on the machine where tests are run.
 Library           String    # A test library for string manipulation and verification.
 Library           Telnet    # A test library providing communication over Telnet connections.
+Library           XML    # A test library for verifying and modifying XML documents.
