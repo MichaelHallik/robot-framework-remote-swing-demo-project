@@ -1,0 +1,35 @@
+*** Settings ***
+Suite Setup       Setup
+Suite Teardown    Teardown
+Resource          ../Resources/ACTS_functions.txt
+
+*** Test Cases ***
+Check main menu items
+    #    Get the menu item labels
+    @{names}=    Get Main Menu Item Names
+    #    Validate the labels
+    Should Contain    ${names}    ${SPACE}${SPACE}System
+    Should Contain    ${names}    Edit
+    Should Contain    ${names}    Operations
+    Should Contain    ${names}    Help
+
+Open New System dialog
+    #    Open the dialog
+    Select menu item    ${SPACE}${SPACE}System|New
+    Select Dialog    New System Form
+    Select Tab As Context    0
+    #    Add first param    Of type boolean
+    Insert Into Text Field    4    mySys
+    Insert Into Text Field    3    myBool
+    Push Button    Add to Table
+    #    Add second param    Of type string
+    Select From Combo Box    0    Enum
+    Insert Into Text Field    3    myString
+    Insert Into Text Field    2    someString
+    Push Button    Add ->
+    Push Button    Add to Table
+    #    Add the system
+    Select Dialog    New System Form
+    Push Button    Add System
+    #    Hard-coded sleep for demo purposes only
+    Sleep    3s

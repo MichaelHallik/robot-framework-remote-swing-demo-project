@@ -1,0 +1,45 @@
+*** Settings ***
+Resource          Test_library_imports.txt
+
+*** Keywords ***
+Setup
+    Start Application    ACTS    java -jar C:\\Demos\\Test_libraries\\Swing_libraries\\Demo_SUTs\\acts_gui_2.9.jar
+    Select Window    regexp=^ACTS.*
+
+Teardown
+    #    Select the main window
+    RemoteSwingLibrary.Select Window    regexp=^ACTS.*
+    #    Select File->Exit    Hard-coded sleep for demo-purposes only
+    Select menu item    ${SPACE}${SPACE}System|Exit
+    Sleep    1s
+    #    Select the dialog
+    Select Dialog    ACTS
+    #    Choose the No button to discard changes
+    Push Button    No
+
+Select menu item
+    [Arguments]    ${menuPath}
+    Select From Menu    ${menuPath}
+
+Get debug info
+    #    Context info
+    ${context}=    Get Current Context
+    ${frames}=    Get Internal Frames In Context
+    ${components}=    List Components In Context
+    Log    ${context}    level=WARN
+    Log    ${frames}    level=WARN
+    Log    ${components}    level=WARN
+    #    RemoteSwingLib info
+    Log    ${REMOTESWINGLIBRARYPATH}    level=WARN
+    Log    ${REMOTESWINGLIBRARYPORT}    level=WARN
+
+Click components
+    [Arguments]    ${begin}    ${end}
+    : FOR    ${index}    IN RANGE    ${begin}    ${end} + 1
+    \    Click On Component    ${index}    times=1
+    \    Sleep    0.5
+
+Type a string
+    [Arguments]    @{vks}
+    : FOR    ${item}    IN    @{vks}
+    \    Send Keyboard Event    VK_${item}

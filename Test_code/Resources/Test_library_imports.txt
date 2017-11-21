@@ -1,0 +1,10 @@
+*** Settings ***
+Library           Collections    # A test library providing keywords for handling lists and dictionaries.
+Library           DateTime    # A test library for creating and verifying date and time values as well as calculations between them.
+Library           Dialogs    # A test library providing dialogs for interacting with users.
+Library           OperatingSystem    # A test library providing keywords for various OS related tasks.
+Library           Process    # A test library for running processes.
+Library           RemoteSwingLibrary    # A library for testing and connecting to a java process and using SwingLibrary.
+Library           Screenshot    # A test library for taking screenshots on the machine where tests are run.
+Library           String    # A test library for string manipulation and verification.
+Library           Telnet    # A test library providing communication over Telnet connections.
