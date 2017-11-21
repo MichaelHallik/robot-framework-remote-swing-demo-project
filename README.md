@@ -1,1 +1,1 @@
-# robot-framework-remote_swing-demo-project
+# robot-framework-remote-swing-demo-project
