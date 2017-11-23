@@ -3,7 +3,7 @@ Resource          Test_library_imports.txt
 
 *** Keywords ***
 Setup
-    Start Application    ACTS    java -jar C:\\Demos\\Test_libraries\\Swing_libraries\\Demo_SUTs\\acts_gui_2.9.jar
+    Start Application    ACTS    java -jar <your_path>\\robot-framework-remote-swing-demo-project-master\\_SUT\\acts_gui_2.9.jar
     Select Window    regexp=^ACTS.*
 
 Teardown
