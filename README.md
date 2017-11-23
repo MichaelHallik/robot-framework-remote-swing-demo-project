@@ -24,6 +24,8 @@ The project consists of three folders:
 2. Optionally: an editor atop the RF.
 3. An installed Java JRE/JDK (1.6 or later).
 
+Tested only on Windows (7, 8, 10), but should run elsewhere.
+
 <b>To run the demo:</b>
 
 1. Download or clone the project.
