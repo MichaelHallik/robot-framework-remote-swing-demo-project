@@ -8,7 +8,7 @@ This demo project is actually just a simple POC that I did a couple of years ago
 
 However, the goal for this project is to simply provide an example that will work out-of-the-box and that will show you by example how to technically get the RemoteSwingLibrary to work.
 
-One further note: as you can gather from it's project pages, the RemoteSwingLibrary enables you to connect to a JVM running the Java Swing application, while running the RF itself with C-Python. Of course, you COULD also run the RF on Jython. However, in the latter case it would probably be better to simply use the SwingLibrary (https://github.com/robotframework/SwingLibrary).
+One further note: as you can gather from it's project pages, the RemoteSwingLibrary enables you to connect to a JVM running the Java Swing application, while running the RF itself with C-Python. Of course, you COULD also run the RF on Jython. In the latter case it would probably be better to simply use the SwingLibrary (https://github.com/robotframework/SwingLibrary).
 
 However, even when running on Jython, in certain cases you still might want to use the RemoteSwingLibrary, since the latter can be used to connect to a process running in a JVM on another (virtual) machine. Please see for details on when and how to use the Remote Library Interface (which the RemoteSwingLibrary utilizes): http://blog.xebia.com/the-robot-framework-remote-library-interface-using-the-remote-database-library-to-connect-to-ibm-db2/
 
