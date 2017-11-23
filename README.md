@@ -2,7 +2,7 @@
 
 <b>Introduction:</b>
 
-This is a demo test project, that uses the Robot Framework RemoteSwingLibrary, which is an external RF test library. See here for its project page: https://github.com/robotframework/remoteswinglibrary.
+This is a demo test project, that uses the Robot Framework RemoteSwingLibrary, which is an external RF test library. See here for its project page: https://github.com/robotframework/remoteswinglibrary. For Robot Framework, see here: https://github.com/robotframework/robotframework.
 
 This demo project is actually just a simple POC that I did a couple of years ago. As such it is by no means representative of how a real-world test project should be set up and structured. For instance, there is code in the test cases and there is a function that contains merely one call to a lower-level function.
 
